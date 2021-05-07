@@ -142,7 +142,7 @@ class OrgMeta(ModelBase):
                 models.ForeignKey(
                     USER_MODEL,
                     related_name="%(app_label)s_%(class)s",
-                    on_delete=models.CASCADE,
+                    on_delete=models.DO_NOTHING,
                 ),
             )
         try:
@@ -197,7 +197,7 @@ class OrgMeta(ModelBase):
                 models.ForeignKey(
                     USER_MODEL,
                     related_name="%(app_label)s_%(class)s_sent_invitations",
-                    on_delete=models.CASCADE,
+                    on_delete=models.DO_NOTHING,
                 ),
             )
         try:
@@ -210,7 +210,7 @@ class OrgMeta(ModelBase):
                     null=True,
                     blank=True,
                     related_name="%(app_label)s_%(class)s_invitations",
-                    on_delete=models.CASCADE,
+                    on_delete=models.DO_NOTHING,
                 ),
             )
         try:
